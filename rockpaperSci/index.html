@@ -1,0 +1,96 @@
+<html>
+
+<body>
+<!----
+<input type="button" value="Rock" onclick="choose('rock')"/> 
+
+<input type="button" value="Paper" onclick="choose('paper')"/>
+
+<input type="button" value="Scissors" onclick="choose('scissors')"/>
+
+<input type="button" value="Spock" onclick="choose('spock')"/>
+
+<input type="button" value="Lizard" onclick="choose('lizard')"/>
+--->
+<div style="display:none";>
+<p id="compPlayer"> </p>
+<p id="result"> </p>
+<p id="usr"> </p>
+</div>
+<canvas id="mycanvas" style="background:#aaa;" width="580" height="520"></canvas>
+		<script>
+		function loadCanvas(dataURL) {
+        var canvas = document.getElementById('mycanvas');
+        var context = canvas.getContext('2d');
+
+		  canvas.addEventListener("mousedown", getPosition, false);
+
+function getPosition(event)
+{
+  var x = event.x;
+  var y = event.y;
+
+  //var canvas = document.getElementById("canvas");
+
+  x -= canvas.offsetLeft;
+  y -= canvas.offsetTop;
+
+  //alert("x:" + x + " y:" + y);
+  
+  
+   /***rock**/
+	  if (x >= 236 && x <= 339 && y >= 26 && y <= 144){
+	  choose('rock');
+	  //alert("Rock");
+	  }
+  
+	  if (x >= 95 && x <= 219 && y >= 120 && y <= 241){
+	  choose('paper');
+	 // alert("Paper");
+	  }
+  
+	if (x >= 140 && x <= 266 && y >= 271 && y <= 400){
+	  choose('scissors');
+	  //alert("Scissors");
+	  }
+	  
+	  if (x >= 311 && x <= 433 && y >= 271 && y <= 400){
+	  choose('spock');
+	  //alert("Spock");
+	  }
+  
+    if (x >= 358 && x <= 485 && y >= 120 && y <= 241){
+	  choose('lizard');
+	  //alert("Lizard");
+	  }
+  
+context.clearRect ( 0 ,420 , 500 , 500 );
+context.font="24px Arial";
+context.fillText(document.getElementById('usr').innerHTML,0,450);
+context.fillText(document.getElementById('compPlayer').innerHTML,0,475);
+context.fillText(document.getElementById('result').innerHTML,0,500);
+
+  
+}
+		
+		
+        // load image from data url
+        var imageObj = new Image();
+        imageObj.onload = function() {
+          context.drawImage(this, 0, 0);
+        };
+
+        imageObj.src = 'image.jpg';
+      }
+	  loadCanvas();
+	  
+	  
+	 
+		
+		</script>
+
+
+<script src="RockPaperScissors.js"></script>
+</body>
+
+</html>

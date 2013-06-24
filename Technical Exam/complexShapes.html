@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+<body>
+
+
+<div>This is a cube</div>
+<div>This is a Triangle</div>
+<div>This is a big green circle</div>
+
+
+<script type="text/javascript">
+$('document').ready(function() {
+	 
+var deg = 0;
+var popTop = 0;
+var hitTop = false;
+
+
+// add tags to the divs 
+$("div").each(function(i) {
+  $(this).attr("id", "shape" + i);
+});
+
+//create a html5 canvas using javascript
+var canvas = document.createElement("canvas");
+canvas.style.position = "absolute";
+canvas.width = 700;
+canvas.height = 700;
+var ctx = canvas.getContext("2d");
+
+
+
+var FPS = 30;
+setInterval(function(){update()}, 33);
+
+document.getElementById("shape0").style.minHeight = "3px";
+var textSqr = document.getElementById("shape1").innerHTML;
+var textTri = document.getElementById("shape2").innerHTML;
+var textCir = document.getElementById("shape3").innerHTML;
+
+
+// draw your object
+
+
+//begin shapes
+
+
+function update() {
+				//triangle and square animation
+							   if ( (popTop >= 0) && (hitTop == false)){
+							  
+							  popTop = popTop + 10;
+							  
+							  }
+							  if ((hitTop == true) && (popTop != 0)){
+							  
+							  popTop = popTop - 10;
+							  }
+							  
+							  if ((hitTop == true) && (popTop == 0)){
+							  
+							  hitTop = false;
+							  }
+							  
+							  if (popTop == 350){
+							  hitTop = true;
+							  
+							  }
+							  
+
+
+ 
+  /*******************Triangle*********************/
+  
+  
+  
+  ctx.save();
+  
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  ctx.translate(175, 125 - popTop);
+     
+
+//triangle
+var textTriStr = document.getElementById("shape2").innerHTML;
+var textTri = textTriStr.replace("Triangle","triangle");
+ctx.strokeStyle = "red";
+ctx.moveTo(200,220);
+ctx.lineTo(295,325);
+ctx.lineTo(105,325);
+ctx.stroke();
+				
+				ctx.fillStyle = "#CC1100";
+				ctx.fill();
+
+
+							 // font color to write the text with
+							  ctx.fillStyle = "white"; 
+							  ctx.font = "16px serif";
+							  ctx.fillText(textTri, 150 ,315);
+							 
+  
+  
+   ctx.restore();
+
+   /****************Square***********************/
+   
+   
+   ctx.save();
+ 
+   ctx.translate(75, -10 + popTop);
+     
+   
+   
+  var textSqr = document.getElementById("shape1").innerHTML;
+
+// Create gradient for square
+					var grd=ctx.createLinearGradient(0,100,0,210);
+					grd.addColorStop(0,"black");
+					grd.addColorStop(.5,"#575757");
+					grd.addColorStop(1,"black");
+
+					ctx.fillStyle=grd;
+					ctx.fillRect (10, 80, 150, 150);
+
+ 
+ 
+							 // font color to write the text with
+							  ctx.fillStyle = "white";
+							  ctx.font = "16px serif";
+							  ctx.fillText(textSqr, 45 ,160);
+  
+  ctx.restore();
+  
+ctx.save();
+
+
+
+    
+ 
+   /******************Circle*********************/
+   
+   
+    //Move to the right of canvas and spin
+    ctx.translate(575, 270); //moves it around the canvas
+    ctx.rotate(deg * 0.015); //rotate
+													
+													
+													//Draw circle
+													
+													var radius = 75;
+													var textCirStr = document.getElementById("shape3").innerHTML;
+													var textCirHolder = textCirStr.replace("big","big,");
+													var textCir = new Array();
+													textCir = textCirHolder.split(",");
+													ctx.beginPath();
+												
+													ctx.arc(0, 0, radius, 0, Math.PI*2, true); 
+													
+													ctx.closePath();
+
+															// Create gradient for the circle
+															var grdCir = ctx.createRadialGradient(0,0,5,0,0,100);
+															grdCir.addColorStop(0,"#32CD32");
+															grdCir.addColorStop(1,"green");
+															// Fill with gradient
+															ctx.fillStyle = grdCir;
+															ctx.fill();
+															 
+																	// font color to write the text with
+																	  ctx.fillStyle = "white"; 
+																	  ctx.font = "16px serif";
+																	  ctx.fillText(textCir[0] + ",", -35 ,0);
+																	  ctx.fillText(textCir[1], -38 ,12);
+														  
+														
+	
+    ctx.restore();
+
+							
+  
+							if ( (deg >= 0) && (hitTop == false)){
+							  
+							  deg = deg + 15;
+							  
+							  }
+							  if ((hitTop == true) && (popTop != 0)){
+							  
+							  deg = 0;
+							  }
+							  
+							  
+							 
+}
+	 
+	 
+
+
+document.body.appendChild(canvas);
+});
+
+</script>
+
+
+
+<!-- 
+################### Instructions #####################
+
+Make the above HTML match the below image using only(!) CSS and JavaScript or jQuery: 
+
+https://dl.dropbox.com/s/yv96y10341c346w/test.gif
+
+Notes: 
+- you cannot modify the HTML portion in any way
+- you cannot use any 3-rd party jQuery or JavaScript plugins for the animation portion
+- Compatibility: IE 9+, FF 4+, Chrome 10+, Safari 5.1+
+- Fork this JSfiddle and send back a new url with the result
+
+#######################################################
+-->
+</body>
+
+
+</html>

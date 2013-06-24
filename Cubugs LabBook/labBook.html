@@ -1,0 +1,1247 @@
+<!doctype html>
+<html>
+<head>
+    <title>Cubugs - Lab Book</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=160" />
+    <!--meta name="apple-mobile-web-app-capable" content="yes" /-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+     
+      <meta property="og:title" content="Cubugs - Handcrafted by Tylted"/>
+     
+      <meta property="og:type" content="game"/>
+     
+      <meta property="og:image" content="http://www.tylted.com/GameIcons/257x158/cubug.jpg"/>
+     
+      <meta property="og:site_name" content="Tylted"/>
+    
+    <link rel="stylesheet" href="/global/css/tylted_desktop.css" />
+     
+
+    
+    <!-- HTML5 Shim for old IE browsers -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--<script src="/global/lib/angular-loader-1.0.1.js"></script>-->
+    <script>
+        //Global Variables defined through ASP
+        var strScreenName = 'reonin';
+        var iFunCoinBalance = 840;
+        var strSiteView = 'desktop';
+        var strGiftNotificationIcon = 'gift_icon_y.png';
+        var strPMNotificationIcon = 'PM_icon.png';
+        var strFriendReqNotificationIcon = 'requests_icon.png';
+        var strNotificationIcon = '';
+        var HeaderAdTimeout, MidAdTimeout, FooterAdTimeout, BANNER_ROTATION_FREQ = 25000, RICH_ROTATION_FREQ = 60000, AD_DEFAULT_POST_VALUE = '', isiPad = navigator.userAgent.match(/iPad/i) != null;
+        var lSessionPageViews = 186;
+        var iInterstitialInterval = 90000;
+        var strReferrer = '';
+
+        function getWidth() { xWidth = null; if (window.screen != null) xWidth = window.screen.availWidth; if (window.innerWidth != null) xWidth = window.innerWidth; if (document.body != null) xWidth = document.body.clientWidth; return xWidth; } function getHeight() { xHeight = null; if (window.screen != null) xHeight = window.screen.availHeight; if (window.innerHeight != null) xHeight = window.innerHeight; if (document.body != null) xHeight = document.body.clientHeight; return xHeight; }
+
+    </script>
+    <script src="/js/ads/ads.js"></script>
+    <script src="/js/lib/main.min.js"></script>
+    <script src="/js/lib/ajax.min.js"></script>
+
+</head>
+<body onclick="navToggle('', event);">
+
+<div id="tylted_outer">
+
+    
+    <div id='HeaderAd'  class="ad-banner-desk">
+        <script>
+            var pubId = 30784;
+            
+             //<!-- PubMatic ad tag (Javascript) : Tylted_728x90_ATF_US | http://www.tylted.com | 728 x 90 Leaderboard -->
+            var siteId=30785;var kadId=28157;
+            
+            var kadwidth = 728; var kadheight = 90; var kadtype = 1;
+        </script>
+        <script  src="http://ads.pubmatic.com/AdServer/js/ibshowad.js"></script>
+    </div>
+    <headerNav class="topnav-fixed">
+      <div class="navbar navbar-inverse navbar-fixed-top"> 
+        <div class="navbar-inner"> 
+            <div class="container-fluid"> 
+                <div id="secondary-nav" class="pull-right usermenu secondary-nav" style="margin-top:8px;"> 
+                <div class="loggedinContent"> 
+                	<img src="/img/pixel.png" id="nav-notice" width="21">
+                    <img src="/i/ib.aspx?m=ah&amp;c=reonin" width="31"> 
+                </div> 
+                </div> 
+                <button id="secondary-nav-close"></button> 
+                <div class="loggedinContent"> 
+                <div class="nav-username"> 
+            		<a href="/p/player.asp"><div style="font-weight:normal; color: #FF9600; font-family:Rubrik-Bold, Arial, Helvetica, Sans-Serif;">reonin</div></a> 
+            	</div> 
+                </div> 
+                <button id="primary-nav" type="button" class="btn btn-navbar pull-left" style="margin-top:8px; width: 30px;
+height: 30px;"> 
+                  <!--  <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span> -->
+                </button> 
+                <button id="primary-nav-close"></button> 
+                
+                <div class="nav-span-logo"> 
+                	<a class="nav-logo" href="/"><img src="/img/global/img/logo_pc.png" alt="tylted" border="0"></a> 
+                </div>
+                
+                <div class="nav-collapse collapse"> 
+                    <ul class="nav"> 
+                        <li class="nav"> 
+                            <div class="dropdown"> 
+                                <a class="dropdown-toggle" data-toggle="dropdown" onclick="navToggle('GamesNav', event);return false;">GAMES</a> 
+                                <ul id="GamesNav" class="dropdown-menu" name="menu" aria-labelledby="label"> 
+                                    <li> 
+                                        Hottest Games 
+                                    </li> 
+                                    <li> 
+                                        <a href="/h/spd/main.asp">Luck O' The Irish</a>
+                                    </li> 
+                                    <li> 
+                                        <a href="/g/ops/opsIndex.asp">Special Ops</a>
+                                    </li> 
+                                    <li> 
+                                        <a href="/g/vampire/vampireIndex.asp">Vampires Rising</a>
+                                    </li> 
+                                    <li class="allGames"> 
+                                        <a href="/games.asp">See All Games</a> 
+                                    </li> 
+                                </ul> 
+							</div> 
+                        </li> 
+                        <li class="nav"> 
+                            <div class="dropdown"> 
+                                <a class="dropdown-toggle" data-toggle="dropdown" onclick="navToggle('ComNav', event);return false;">COMMUNITY</a> 
+                                <ul id="ComNav" class="dropdown-menu" name="menu" aria-labelledby="label"> 
+                                    <li> 
+                                        <a href="/h/xm/main.asp">Merry Mobile</a> 
+                                    </li> 
+                                    <li> 
+                                        <a href="/g/bar/barChoose.asp">Bar Scene</a> 
+                                    </li>
+                                    <li> 
+                                        <a href="/mall/flirts/ffindex.asp">Fun Flirts</a>
+                                    </li> 
+                                    <li> 
+                                        <a href="/p/friends.asp?p=reonin">Friends</a> 
+                                    </li> 
+                                    <li> 
+                                        <a href="/p/blog/blog.asp?p=reonin">My Blog</a> 
+                                    </li> 
+                                </ul> 
+							</div> 
+                        </li> 
+                        <li class="nav"> 
+                            <div class="dropdown"> 
+                                <a class="dropdown-toggle" data-toggle="dropdown" onclick="navToggle('ShopNav', event);return false;">SHOPPING</a> 
+                                <ul id="ShopNav" class="dropdown-menu" name="menu" aria-labelledby="label"> 
+                                    <li> 
+                                        <a href="/mall/index.asp">Mall</a> 
+                                    </li> 
+                                    <li> 
+                                        <a href="/mall/bank/fcnew.asp">FunCoins</a> 
+                                    </li> 
+                                    <li> 
+                                        <a href="/mall/bank/mobileoffers.asp">Offer Wall</a> 
+                                    </li> 
+                                </ul> 
+							</div> 
+                        </li> 
+                    </ul> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
+</headerNav>
+    
+    <headerNavRight class="ty-topnav-right"> 
+    <ul id="ty-navigation-secondary"> 
+	    <li id="ty-nav-menu-secondary" class="main"> 
+            <div class="ty-nav-main-heading">Inbox </div> 
+	        <ul class="ty-nav-sec-second" > 
+	        	<li class="Navli"> 
+                   <a href="/p/inbox.asp"><img src="/img/global/img/PM_icon.png"> Private Messages <span id="inboxCount" class="inboxCount"></span></a> 
+	        	</li> 
+                 <li class="Navli" style="display:none;" id="giftNavli"> 
+                      <a href="/mall/gp.asp?a=sgl"><img src="/img/global/img/gift_icon_y.png"> New Gifts! <span class="inboxCount" id="giftCount"></span></a> 
+	        	</li> 
+                <li class="Navli" style="display:block;" id="wlNavli"> 
+                    <a href="/mall/wl.asp"><img src="/img/global/img/gift_icon_y.png"> My Wishlist</a> 
+	        	</li> 
+                <li class="Navli"> 
+                    <a href="/p/frMng.asp"><img src="/img/global/img/requests_icon.png"> Friend Requests <span class="inboxCount" id="friendReqCount"></span></a>  
+	    		</li> 
+            </ul> 
+            <div class="ty-nav-main-heading">Account</div>                  
+	     	<ul class="ty-nav-sec-first"> 
+	        	<li>  
+                    <a href="/mall/bank/fcnew.asp"> 
+	        			<div class="nav-sec-first-left">FunCoins</div> 
+	        			<div class="nav-sec-first-right"  id="funcoinCount">840</div>  
+                    </a> 
+	        	</li> 
+	        	<li>  
+                    <a href="/mall/bank/cellubank.asp"> 
+	        			<div class="nav-sec-first-left">Tylted Tokens</div> 
+	        			<div class="nav-sec-first-right" id="tyltpointCount">7,328</div>  
+                    </a> 
+	        	</li> 
+	        	<li>  
+                    <a href="/p/tr.asp"> 
+	        	    	<div class="nav-sec-first-left">Trophy Points</div> 
+	        			<div class="nav-sec-first-right" id="trophyscoreCount">541</div>  
+                    </a> 
+	        	</li> 
+	        </ul> 
+	        <ul class="ty-nav-sec-second" > 
+	        	<li>  
+                    <a href="/p/player.asp">My Profile</a> 
+	        	</li> 
+	        	<li>  
+                    <a href="/p/closet.asp">My Appearance</a> 
+	        	</li> 
+	        	<li>  
+                    <a href="/p/inv.asp">My Stuff</a> 
+	        	</li> 
+                <li>  
+                    <a href="/logout.asp">Logout</a> 
+                </li> 
+	        </ul> 
+	        <div class="nav-sec-padding-bottom"> </div> 
+	    </li> 
+	</ul>
+    </headerNavRight>
+    
+
+
+  
+    <script src="/global/lib/jquery.min.js"></script>
+    <script src="/global/lib/app.js"></script>
+   
+    <div id="tylted_inner" style="z-index:99">
+              
+        <div id="lightboxAD" style="width:100%; top:  200px ;">
+            <div id="lightbox-panel" class="hCenter">
+                <div class="lightboxContent" style="position: relative;">
+                    <div id="close-panel"><a style="color: #000;" href="#"><img src="/img/global/close.png" /></a></div>
+                    <div id="interstitial"></div>
+                </div>
+           </div><!-- /lightbox-panel -->
+        </div>
+            <div id="lightbox"> </div><!-- /lightbox -->
+    <script>
+        if (getWidth() > 845) {
+            $("#lightboxAD").css('width', '845px');
+        } else {
+            $("#lightboxAD").css('width','100%');
+        }
+
+
+    </script>
+
+     
+
+       <div id="leftSkyScraper">
+          <script type="text/javascript">
+            var pubId = 30784;
+
+         
+            //<!--  PubMatic ad tag (Javascript) : Tylted_160x600_ROS_Left_US | http://www.tylted.com | 160 x 600 Wide Skyscraper -->
+            var siteId = 30785;
+            var kadId = 31868;
+         
+            var kadwidth = 160;  var kadheight = 600; var kadtype = 1;
+            </script>
+            <script type="text/javascript" src="http://ads.pubmatic.com/AdServer/js/ibshowad.js">
+            </script>       
+       </div>
+       <div id="tylted_content">
+     <div style="width: 480px; margin:0 auto;">
+     <link href='480.css' rel='stylesheet' type='text/css'/>
+
+<div style="display:none;">
+<button id ="box0"></button>
+<button id ="box1"></button>
+<button id ="box2"></button>
+<button id ="box3"></button>
+<button id ="box4"></button>
+<button id ="box5"></button>
+<button id ="box6"></button>
+<button id ="box7"></button>
+<button id ="box8"></button>
+
+
+<p id="checking"> Original STRING</p>
+<p id="demo"> </p>
+<br/>
+
+<p>ORIGINAL ARRAY</p>
+<p id="showAll"></p>
+<br/>
+<p>NETS ARRAY </p>
+<p id="showNets"> </p>
+<br/>
+<p>BUGS ARRAY </p>
+<p id="bugs"> </p>
+<br/>
+
+<p>CREATED BUGS ARRAY </p>
+<p id="createdBugs"> </p>
+<br/>
+
+<p>UNCREATED BUGS ARRAY </p>
+<p id="unCreatedBugs"> </p>
+<br/>
+
+<p>AVATAR ARRAY</p>
+<p id="ava"> </p> 
+
+<p id="lastButtonClickedCreated"> </p>
+<p id="lastButtonClickedUnCreated"> </p>
+</div>
+
+
+
+<img id="heyhey" src="/i/ib.aspx?m=g/cubug/labBook&amp;f=j&amp;s=480&amp;c=Cubugs - Lab Book." useMap="#labBook"/>
+
+<map id="labBook" name="labBook">
+    
+	
+		<area id="backToLab" shape="rect" name="back" title="back" coords="
+			395, 
+			0,
+			459,
+			40"
+		href="lab.asp?p=reonin&amp;v=6RuvB83l*g0"/>
+	
+	
+		<area id="firstPage" shape="rect" name="First Page" title="First Page" coords="
+			23, 
+			507,
+			121,
+			590"
+		href="#" onClick='firstPageBut(); return false;'"/>
+	
+	
+		<area id="previousPage" shape="rect" name="Previous Page" title="Previous Page" coords="
+			133, 
+			507,
+			231,
+			590"
+		href="#" onClick='previousPageBut(); return false;'"/>
+	
+	
+		<area id="nextPage" shape="rect" name="Next Page" title="Next Page" coords="
+			245, 
+			507,
+			343,
+			590"
+		href="#" onClick='nextPageBut(); return false;'"/>
+	
+	
+		<area id="lastPage" shape="rect" name="Last Page" title="Last Page" coords="
+			355, 
+			507,
+			453,
+			590"
+		href="#" onClick='lastPageBut(); return false;'"/>
+	
+	
+		<area id="createButton" shape="rect" name="Discoverd/Created" title="Discoverd/Created" coords="
+			13, 
+			610,
+			83,
+			680"
+		href="#" onClick='toggleLock(); return false;'"/>
+	
+	
+		<area id="cubugsButton" shape="rect" name="Cubugs" title="Cubugs" coords="
+			104, 
+			610,
+			174,
+			680"
+		href="#" onClick='cubugIT(); return false;'"/>
+	
+	
+		<area id="allButton" shape="rect" name="All Items" title="All Items" coords="
+			195, 
+			610,
+			276,
+			680"
+		href="#" onClick='allIT(); return false;'"/>
+	
+	
+		<area id="netButtons" shape="rect" name="Nets" title="Nets" coords="
+			287, 
+			610,
+			357,
+			680"
+		href="#" onClick='netIT(); return false;'"/>
+	
+	
+		<area id="avatarButton" shape="rect" name="Avatar Items" title="Avatar Items" coords="
+			378, 
+			610,
+			448,
+			680"
+		href="#" onClick='avatarIT(); return false;'"/>
+	
+	
+		<area id="box0" shape="rect" name="box0" title="box0" coords="
+			3, 
+			55,
+			158,
+			194"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box1" shape="rect" name="box1" title="box1" coords="
+			163, 
+			55,
+			318,
+			194"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box2" shape="rect" name="box2" title="box2" coords="
+			323, 
+			55,
+			478,
+			194"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box3" shape="rect" name="box3" title="box3" coords="
+			3, 
+			200,
+			158,
+			339"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box4" shape="rect" name="box4" title="box4" coords="
+			163, 
+			200,
+			318,
+			339"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box5" shape="rect" name="box5" title="box5" coords="
+			323, 
+			200,
+			478,
+			339"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box6" shape="rect" name="box6" title="box6" coords="
+			3, 
+			345,
+			158,
+			500"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box7" shape="rect" name="box7" title="box7" coords="
+			163, 
+			345,
+			318,
+			500"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+	
+		<area id="box8" shape="rect" name="box8" title="box8" coords="
+			323, 
+			345,
+			478,
+			500"
+		href="#" onclick='itemDetails(id); return false;'"/>
+	
+  
+</map>
+
+
+
+
+<script src="ajax.js">
+</script>
+<script type="text/javascript">
+     //<![CDATA[
+
+	    var allNames = new Array();
+	    var allNamesString = 'Flea Tee;Yellonium Web;Emofly (?);Emofly (?);Yinsect;Sun Bee;Chlora;Sparky;Lilybit;Old Net;Fire Flea;';
+	    allNames = allNamesString.split(";");
+	    var CUBUG_IMAGE_PATH = '/img/g/cubug/bugs/';
+	    var MINI_AVA_PATH = 'ingame/standfront/';
+	    var MINI_BUG_PATH = '/img/g/cubug/wapGifs/';
+	    var PAGE_ENTRIES = '9';
+	    var iMaxIndex = '10';
+	    var originalStr = 'shirt-X01056;ava;1§net-1;net;2§bug-b2;bug;1§bug-d2;bug;1§bug-a2;bug;2§bug-b1;bug;2§bug-c1;bug;2§bug-d1;bug;2§bug-e1;bug;2§net-0;net;2§bug-a1;bug;2';
+	    var originalArray = new Array(originalStr.split("§"));
+	    var myEncrypt = 'fallom;hubbex;wunkya;panoco;tishti;rellon;amball;gingto;';
+	    var myEncryptArray = new Array();
+	    myEncryptArray = myEncrypt.split(";");
+	    var itemArrays = new Array();
+	    itemArrays["all"] = new Array();
+	    itemArrays["cubugs-all"] = new Array();
+	    itemArrays["cubugs-created"] = new Array();
+	    itemArrays["cubugs-uncreated"] = new Array();
+	    itemArrays["avatar"] = new Array();
+	    itemArrays["nets"] = new Array();
+	    itemArrays["avatar-uncreated"] = new Array();
+	    itemArrays["nets-uncreated"] = new Array();
+	    itemArrays["all-uncreated"] = new Array();
+	    itemArrays["all-created"] = new Array();
+	    var imagePaths = new Array();
+	    var DIR_BUGS = 0;
+	    var DIR_AVA = 1;
+	    var DIR_NETS = 2;
+	    var DIR_CUBES = 3;
+	    imagePaths[DIR_BUGS] = "/img/g/cubug/bugs/"; 
+	    imagePaths[DIR_CUBES] = "/img/g/cubug/bigcubes/";
+	    imagePaths[DIR_AVA] = "/img/g/cubug/ava/"; 
+	    imagePaths[DIR_NETS] = "/img/g/cubug/nets/";
+	    var createdButDown1 = ".S.";
+	    var createdButDown2 = ".TS.";
+	    var cubugButDown1 = "S.";
+	    var cubugButDown2 = ".TS.";
+	    var allButDown1 = "S.";
+	    var allButDown2 = ".TS.";
+	    var netButDown1 = "S.";
+	    var netButDown2 = ".TS.";
+	    var avaButDown1 = "S.";
+	    var avaButDown2 = ".TS.";
+	    var whichArray = "all-created";
+	    var page = 0;
+	    var pageSize = 9;
+	    var toggle = false;
+	    var itemImage = new Array();
+	    var bugPatt = new RegExp("bug;");
+	    var avaPatt = new RegExp("ava;");
+	    var netPatt = new RegExp("net;");
+	    var uncreatedPatt = new RegExp("bug;1");
+	    var createdPatt = new RegExp("bug;2");
+	    var uncreatedPattNET = new RegExp("net;1");
+	    var createdPattNET = new RegExp("net;2");
+	    var uncreatedPattAVA = new RegExp("ava;1");
+	    var createdPattAVA = new RegExp("ava;2");
+	    var parseBox0 = new Array();
+	    var parseBox1 = new Array();
+	    var parseBox1 = new Array();
+	    var parseBox2 = new Array();
+	    var parseBox3 = new Array();
+	    var parseBox4 = new Array();
+	    var parseBox5 = new Array();
+	    var parseBox6 = new Array();
+	    var parseBox7 = new Array();
+	    var parseBox8 = new Array();
+	    var itemBoxArray = new Array();
+
+	    var lastButtonClickedCreated;
+	    var lastButtonClickedUnCreated;
+
+
+	    var hint;
+
+	    var familyPatt1 = new RegExp("1");
+	    var myCurrentProgram = 'formula.asp?c=net-1&amp;pg=1&amp;t=net&amp;p=reonin&amp;bt=all&amp;m=1';
+	    myOriginalSplit = originalStr.split("§");
+	    var y = 0;
+	    for (i = 0; i <= allNames.length; i++) {
+		    myOriginalSplit[i] = myOriginalSplit[i] + ";" + allNames[i];
+		    if (bugPatt.test(myOriginalSplit[i])) {
+			    myOriginalSplit[i] = myOriginalSplit[i] + ";" + myEncryptArray[y];
+			    y++
+		    }
+
+	    }
+	    for (var i = 0; i <= myOriginalSplit.length; i++) {
+		    if (bugPatt.test(myOriginalSplit[i]) == true) {
+			    itemArrays["all"][itemArrays["all"].length] = myOriginalSplit[i].replace("bug-", "") + ";" + DIR_BUGS;
+			    itemArrays["cubugs-all"][itemArrays["cubugs-all"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    if (uncreatedPatt.test(myOriginalSplit[i]) == true) {
+				    itemArrays["cubugs-uncreated"][itemArrays["cubugs-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-uncreated"][itemArrays["all-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+			    if (createdPatt.test(myOriginalSplit[i]) == true) {
+				    itemArrays["cubugs-created"][itemArrays["cubugs-created"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-created"][itemArrays["all-created"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+		    }
+		    if (avaPatt.test(myOriginalSplit[i]) == true) {
+			    itemArrays["all"][itemArrays["all"].length] = myOriginalSplit[i] + ";" + DIR_AVA;
+			    if (createdPattAVA.test(myOriginalSplit[i]) == true) {
+				    itemArrays["avatar"][itemArrays["avatar"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-created"][itemArrays["all-created"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+			    if (uncreatedPattAVA.test(myOriginalSplit[i]) == true) {
+				    itemArrays["avatar-uncreated"][itemArrays["avatar-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-uncreated"][itemArrays["all-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+		    }
+		    if (netPatt.test(myOriginalSplit[i]) == true) {
+			    itemArrays["all"][itemArrays["all"].length] = myOriginalSplit[i] + ";" + DIR_NETS;
+			    if (createdPattNET.test(myOriginalSplit[i]) == true) {
+				    itemArrays["nets"][itemArrays["nets"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-created"][itemArrays["all-created"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+			    if (uncreatedPattNET.test(myOriginalSplit[i]) == true) {
+				    itemArrays["nets-uncreated"][itemArrays["nets-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+				    itemArrays["all-uncreated"][itemArrays["all-uncreated"].length] = itemArrays["all"][itemArrays["all"].length - 1];
+			    }
+		    }
+	    }
+	    refreshList(whichArray);
+	    function refreshList(whichArray) {
+		    var start = page * pageSize;
+		    var end = start + pageSize - 1;
+		    var unknown = false;
+		    var index = -1;
+	   
+		    for (var w = start; w <= end; w++) {
+			    index++;
+			    if (itemArrays[whichArray][w]) {
+				    var splitty = itemArrays[whichArray][w].split(';');
+				    itemImage[itemImage.length] = splitty[0];
+				    if (itemImage[itemImage.length] == "") {
+					    unknown = true;
+				    }
+				    else {
+					    unknown = false;          
+					    itemBoxArray[index] = itemArrays[whichArray][w];
+				    }
+			    }
+			    else {
+				    unknown = true;
+			    }
+			    if (unknown) {
+				    itemBoxArray[index] = "-;-;-;-;";
+			    }
+		    }
+		    var createButState;
+		    if (toggle == false) {
+			    createButState = "created";
+		    }
+		    else if (toggle == true) {
+			    createButState = "uncreated";
+		    }
+		    parseBox0 = itemBoxArray[0].split(";");
+		    parseBox1 = itemBoxArray[1].split(";");
+		    parseBox2 = itemBoxArray[2].split(";");
+		    parseBox3 = itemBoxArray[3].split(";");
+		    parseBox4 = itemBoxArray[4].split(";");
+		    parseBox5 = itemBoxArray[5].split(";");
+		    parseBox6 = itemBoxArray[6].split(";");
+		    parseBox7 = itemBoxArray[7].split(";");
+		    parseBox8 = itemBoxArray[8].split(";");
+
+
+		    switch (parseBox0[1]) {
+			    case "net":
+				    parseBox0[0] = "nets/" + parseBox0[0];
+				    break;
+			    case "ava":
+				    parseBox0[0] = "ava/" + parseBox0[0];
+				    break;
+
+			    case "bug":
+				    switch (parseBox0[2]) {
+					    case "1":
+						    parseBox0[0] = "glowcubes/" + parseBox0[4];
+						    break;
+					    case "2":
+						    parseBox0[0] = "bugs/" + parseBox0[4];
+						    break;
+				    }
+				    break;
+		    }
+
+		    switch (parseBox1[1]) {
+			    case "net":
+				    parseBox1[0] = "nets/" + parseBox1[0];
+				    break;
+			    case "ava":
+				    parseBox1[0] = "ava/" + parseBox1[0];
+				    break;
+
+			    case "bug":
+				    switch (parseBox1[2]) {
+					    case "1":
+						    parseBox1[0] = "glowcubes/" + parseBox1[4];
+						    break;
+					    case "2":
+						    parseBox1[0] = "bugs/" + parseBox1[4];
+						    break;
+				    }
+				    break;
+		    }
+
+		    switch (parseBox2[1]) {
+			    case "net":
+				    parseBox2[0] = "nets/" + parseBox2[0];
+				    break;
+			    case "ava":
+				    parseBox2[0] = "ava/" + parseBox2[0];
+				    break;
+			    case "bug":
+				    switch (parseBox2[2]) {
+					    case "1":
+						    parseBox2[0] = "glowcubes/" + parseBox2[4];
+						    break;
+					    case "2":
+						    parseBox2[0] = "bugs/" + parseBox2[4];
+						    break;
+				    }
+				    break;
+		    }
+
+		    switch (parseBox3[1]) {
+			    case "net":
+				    parseBox3[0] = "nets/" + parseBox3[0];
+				    break;
+			    case "ava":
+				    parseBox3[0] = "ava/" + parseBox3[0];
+				    break;
+			    case "bug":
+				    switch (parseBox3[2]) {
+					    case "1":
+						    parseBox3[0] = "glowcubes/" + parseBox3[4];
+						    break;
+					    case "2":
+						    parseBox3[0] = "bugs/" + parseBox3[4];
+						    break;
+				    }
+				    break;
+		    }
+
+		    switch (parseBox4[1]) {
+			    case "net":
+				    parseBox4[0] = "nets/" + parseBox4[0];
+				    break;
+			    case "ava":
+				    parseBox4[0] = "ava/" + parseBox4[0];
+				    break;
+			    case "bug":
+				    switch (parseBox4[2]) {
+					    case "1":
+						    parseBox4[0] = "glowcubes/" + parseBox4[4];
+						    break;
+					    case "2":
+						    parseBox4[0] = "bugs/" + parseBox4[4];
+						    break;
+				    }
+				    break;
+		    }
+		    switch (parseBox5[1]) {
+			    case "net":
+				    parseBox5[0] = "nets/" + parseBox5[0];
+				    break;
+			    case "ava":
+				    parseBox5[0] = "ava/" + parseBox5[0];
+				    break;
+			    case "bug":
+				    switch (parseBox5[2]) {
+					    case "1":
+						    parseBox5[0] = "glowcubes/" + parseBox5[4];
+						    break;
+					    case "2":
+						    parseBox5[0] = "bugs/" + parseBox5[4];
+						    break;
+				    }
+				    break;
+		    }
+
+		    switch (parseBox6[1]) {
+			    case "net":
+				    parseBox6[0] = "nets/" + parseBox6[0];
+				    break;
+			    case "ava":
+				    parseBox6[0] = "ava/" + parseBox6[0];
+				    break;
+			    case "bug":
+				    switch (parseBox6[2]) {
+					    case "1":
+						    parseBox6[0] = "glowcubes/" + parseBox6[4];
+						    break;
+					    case "2":
+						    parseBox6[0] = "bugs/" + parseBox6[4];
+						    break;
+				    }
+				    break;
+		    }
+		    switch (parseBox7[1]) {
+			    case "net":
+				    parseBox7[0] = "nets/" + parseBox7[0];
+				    break;
+			    case "ava":
+				    parseBox7[0] = "ava/" + parseBox7[0];
+				    break;
+			    case "bug":
+				    switch (parseBox7[2]) {
+					    case "1":
+						    parseBox7[0] = "glowcubes/" + parseBox7[4];
+						    break;
+					    case "2":
+						    parseBox7[0] = "bugs/" + parseBox7[4];
+						    break;
+				    }
+				    break;
+		    }
+		    switch (parseBox8[1]) {
+			    case "net":
+				    parseBox8[0] = "nets/" + parseBox8[0];
+				    break;
+			    case "ava":
+				    parseBox8[0] = "ava/" + parseBox8[0];
+				    break;
+			    case "bug":
+				    switch (parseBox8[2]) {
+					    case "1":
+						    parseBox8[0] = "glowcubes/" + parseBox8[4];
+						    break;
+					    case "2":
+						    parseBox8[0] = "bugs/" + parseBox8[4];
+						    break;
+				    }
+				    break;
+
+		    }
+
+var redFamily = new Array("feylia", "gingto", "varslo", "wunkya", "zukfra", "mezzak");
+var blueFamily = new Array("carios", "hubbex", "rellon", "vratix", "strola", "lowvit");
+var greenFamily = new Array("ganbra", "jinije", "qwixon", "tishti", "garfli", "gavris");
+var yellowFamily = new Array("fallom", "mjonny", "nubvyx", "panoco", "alhazy", "renfug");
+var pinkFamily = new Array("amball", "erisid", "kimkie", "paokwe", "xaltyn", "jurini");
+		    var ParseBoxArray = new Array(parseBox0[4], parseBox1[4], parseBox2[4], parseBox3[4], parseBox4[4], parseBox5[4], parseBox6[4], parseBox7[4], parseBox8[4]);
+		    var ParseBoxArray2 = new Array(parseBox0[2], parseBox1[2], parseBox2[2], parseBox3[2], parseBox4[2], parseBox5[2], parseBox6[2], parseBox7[2], parseBox8[2]);
+		    var ParseBoxArrayType = new Array(parseBox0[1], parseBox1[1], parseBox2[1], parseBox3[1], parseBox4[1], parseBox5[1], parseBox6[1], parseBox7[1], parseBox8[1]);
+		    for (var x = 0; x <= 9; x++) {
+		    	if (ParseBoxArrayType[x] == "bug") {
+		    		ParseBoxArray2[x] = ".-.";
+				    for (var i = 0; i <= 4; i++) {
+					    if (ParseBoxArray[x] == redFamily[i]) {
+						    ParseBoxArray2[x] = ".a.";
+					    }
+				    }
+				    for (var i = 0; i <= 4; i++) {
+					    if (ParseBoxArray[x] == blueFamily[i]) {
+						    ParseBoxArray2[x] = ".d.";
+					    }
+				    }
+				    for (var i = 0; i <= 4; i++) {
+					    if (ParseBoxArray[x] == greenFamily[i]) {
+						    ParseBoxArray2[x] = ".c.";
+					    }
+				    }
+				    for (var i = 0; i <= 4; i++) {
+					    if (ParseBoxArray[x] == yellowFamily[i]) {
+						    ParseBoxArray2[x] = ".b.";
+					    }
+				    }
+				    for (var i = 0; i <= 4; i++) {
+					    if (ParseBoxArray[x] == pinkFamily[i]) {
+						    ParseBoxArray2[x] = ".e.";
+					    }
+				    }
+			    }
+			    else {
+				    ParseBoxArray2[x] = ".-.";
+			    }
+				  }
+
+				  if (parseBox0[0] == "-") {
+
+				   hint = "noview";
+
+				  }
+
+				  else {
+
+				   hint = ""; 
+				  }
+
+var itemString2 = [parseBox0[0], ".", parseBox0[3], ".", parseBox0[1], ParseBoxArray2[0], parseBox1[0], ".", parseBox1[3], ".", parseBox1[1], ParseBoxArray2[1], parseBox2[0], ".", parseBox2[3], ".", parseBox2[1], ParseBoxArray2[2], parseBox3[0], ".", parseBox3[3], ".", parseBox3[1], ParseBoxArray2[3], parseBox4[0], ".", parseBox4[3], ".", parseBox4[1], ParseBoxArray2[4], parseBox5[0], ".", parseBox5[3], ".", parseBox5[1], ParseBoxArray2[5], parseBox6[0], ".", parseBox6[3], ".", parseBox6[1], ParseBoxArray2[6], parseBox7[0], ".", parseBox7[3], ".", parseBox7[1], ParseBoxArray2[7], parseBox8[0], ".", parseBox8[3], ".", parseBox8[1], ParseBoxArray2[8]].join();
+		    itemString2 = itemString2.replace(/,/g, "");
+		    var cool = "f=j&s=480&c=back.&strImageString=";
+		    var handSetWidth = '480';
+		    url = "/g/cubug/labbook.asp";
+
+		    document.getElementById("heyhey").src = "/i/ib.aspx?m=g/cubug/labBook&f=j&s=" + handSetWidth + "&c=Lab Book" + createdButDown1 + createButState + createdButDown2 + cubugButDown1 + "cubug" + cubugButDown2 + allButDown1 + "all" + allButDown2 + netButDown1 + "net" + netButDown2 + avaButDown1 + "ava" + avaButDown2 + itemString2 + hint;
+			
+	    }
+	    function firstPageBut() {
+		    page = 0;
+		    refreshList(whichArray);
+	    }
+	    function previousPageBut() {
+		    page--;
+		    if (page < 0) {
+			    page = 0;
+		    }
+		    refreshList(whichArray);
+	    }
+	    function nextPageBut() {
+		    page++;
+		    var pages = Math.floor(itemArrays[whichArray].length / 9);
+		    if (page > pages) {
+			    page = pages;
+		    }
+		    refreshList(whichArray);
+	    }
+	    function lastPageBut() {
+		    page++;
+		    var pages = Math.floor(itemArrays[whichArray].length / 9);
+		    page = pages;
+		    refreshList(whichArray);
+	    }
+	    function toggleLock() {
+		    if (toggle == true) {
+			    whichArray = lastButtonClickedCreated;
+			    toggle = !toggle;
+		    }
+		    else if (toggle == false) {
+			    whichArray = lastButtonClickedUnCreated;
+			    toggle = !toggle;
+		    }
+		    refreshList(whichArray);
+		    page = 0;
+	    }
+	    function allIT() {
+		    if (toggle == false) {
+			    whichArray = "all-created";
+		    }
+		    else if (toggle == true) {
+			    whichArray = "all-uncreated";
+		    }
+		    page = 0;
+		  
+		    lastButtonClickedCreated = "all-created";
+		    lastButtonClickedUnCreated = "all-uncreated";
+		    allButDown1 = "S2.";
+		    allButDown2 = ".TS2.";
+		    createdButDown1 = ".S.";
+		    createdButDown2 = ".TS.";
+		    cubugButDown1 = "S.";
+		    cubugButDown2 = ".TS.";
+		    netButDown1 = "S.";
+		    netButDown2 = ".TS.";
+		    avaButDown1 = "S.";
+		    avaButDown2 = ".TS.";
+		    refreshList(whichArray);
+
+	    }
+	    function cubugIT() {
+		    if (toggle == false) {
+			    whichArray = "cubugs-created";
+		    }
+		    else if (toggle == true) {
+
+			    whichArray = "cubugs-uncreated";
+		    }
+		    page = 0;
+		   
+		    lastButtonClickedCreated = "cubugs-created";
+		    lastButtonClickedUnCreated = "cubugs-uncreated";
+		    cubugButDown1 = "S2.";
+		    cubugButDown2 = ".TS2.";
+		    createdButDown1 = ".S.";
+		    createdButDown2 = ".TS.";
+		    allButDown1 = "S.";
+		    allButDown2 = ".TS.";
+		    netButDown1 = "S.";
+		    netButDown2 = ".TS.";
+		    avaButDown1 = "S.";
+		    avaButDown2 = ".TS.";
+		    refreshList(whichArray);
+	    }
+	    function netIT() {
+		    if (toggle == false) {
+			    whichArray = "nets";
+		    }
+		    else if (toggle == true) {
+			    whichArray = "nets-uncreated";
+		    }
+		    page = 0;
+		   
+		    lastButtonClickedCreated = "nets";
+		    lastButtonClickedUnCreated = "nets-uncreated";
+		    netButDown1 = "S2.";
+		    netButDown2 = ".TS2.";
+		    createdButDown1 = ".S.";
+		    createdButDown2 = ".TS.";
+		    cubugButDown1 = "S.";
+		    cubugButDown2 = ".TS.";
+		    allButDown1 = "S.";
+		    allButDown2 = ".TS.";
+		    avaButDown1 = "S.";
+		    avaButDown2 = ".TS.";
+		    refreshList(whichArray);
+	    }
+	    function avatarIT() {
+		    if (toggle == false) {
+			    whichArray = "avatar";
+		    }
+		    else if (toggle == true) {
+
+			    whichArray = "avatar-uncreated";
+		    }
+		    page = 0;
+		   
+		    lastButtonClickedCreated = "avatar";
+		    lastButtonClickedUnCreated = "avatar-uncreated";
+		    avaButDown1 = "S2.";
+		    avaButDown2 = ".TS2.";
+		    createdButDown1 = ".S.";
+		    createdButDown2 = ".TS.";
+		    cubugButDown1 = "S.";
+		    cubugButDown2 = ".TS.";
+		    allButDown1 = "S.";
+		    allButDown2 = ".TS.";
+		    netButDown1 = "S.";
+		    netButDown2 = ".TS.";
+		    refreshList(whichArray);
+	    }
+
+	    function itemDetails(id) {
+
+		    var parseMe = new Array();
+
+		    switch (id) {
+			    case "box0":
+				    parseMe = itemBoxArray[0].split(";");
+				    break;
+			    case "box1":
+				    parseMe = itemBoxArray[1].split(";");
+				    break;
+			    case "box2":
+				    parseMe = itemBoxArray[2].split(";");
+				    break;
+			    case "box3":
+				    parseMe = itemBoxArray[3].split(";");
+				    break;
+			    case "box4":
+				    parseMe = itemBoxArray[4].split(";");
+				    break;
+			    case "box5":
+				    parseMe = itemBoxArray[5].split(";");
+				    break;
+			    case "box6":
+				    parseMe = itemBoxArray[6].split(";");
+				    break;
+			    case "box7":
+				    parseMe = itemBoxArray[7].split(";");
+				    break;
+			    case "box8":
+				    parseMe = itemBoxArray[8].split(";");
+				    break;       
+		    }
+
+		    var itemName = parseMe[0];
+		    var itemType = parseMe[1];
+		    var mode = parseMe[2];
+		    var EncryptedBugName = parseMe[4];
+		    var redPatt = new RegExp("a");
+		    var yelPatt = new RegExp("b");
+		    var grePatt = new RegExp("c");
+		    var bluPatt = new RegExp("d");
+		    var pinPatt = new RegExp("e");
+		    var elementName;
+
+		    switch (true) {
+			    case (redPatt.test(itemType)):
+				    elementName = "CT";
+				    break;
+			    case (yelPatt.test(itemType)):
+				    elementName = "Yo";
+				    break;
+			    case (grePatt.test(itemType)):
+				    elementName = "Gn";
+				    break;
+			    case (bluPatt.test(itemType)):
+				    elementName = "Bu";
+				    break;
+			    case (pinPatt.test(itemType)):
+				    elementName = "Pi";
+				    break;
+		    }
+
+		    switch (itemType) {
+			    case "bug":
+				    itemName = "bug-" + itemName;
+				    window.location = "/g/cubug/formula.asp?c=" + itemName + "&pg=" + page + "&t=" + itemType + "&m=" + mode + "&p=reonin" + "&v=6RuvB83l*g0";
+				    break;
+			    case "net":
+				    window.location = "/g/cubug/formula.asp?c=" + itemName + "&pg=" + page + "&t=" + itemType + "&m=" + mode + "&p=reonin" + "&v=6RuvB83l*g0";
+				    break;
+			    case "ava":
+				    window.location = "/g/cubug/formula.asp?c=" + itemName + "&pg=" + page + "&t=" + itemType + "&m=" + mode + "&p=reonin" + "&v=6RuvB83l*g0";
+				    break;
+		    }
+	    }
+
+	    //]]
+    </script>
+
+
+    <script type = "text/javascript">
+    //<![CDATA[
+	    var showtype = 'all';
+	    if (showtype == "net") {
+		   
+		    lastButtonClickedCreated = "nets";
+		    lastButtonClickedUnCreated = "nets-uncreated";
+		    netButDown1 = "S2.";
+		    netButDown2 = ".TS2.";
+		    refreshList("nets");
+	    }
+	    else {
+
+	    	lastButtonClickedCreated = "all-uncreated"; 
+	    	lastButtonClickedUnCreated = "all-created";
+		    allButDown1 = "S2.";
+		    allButDown2 = ".TS2.";
+		    refreshList("all-uncreated");
+	    }
+	    //]]
+</script>
+
+<br/><hr/><form id="postForm" method="post" action="/g/cubug/labBook.asp?v=6RuvB83l*g0&amp;pvid=v31b.RJhh&amp;p=reonin&amp;pid=v31b.RITn"><div style="width=460; height: 40px;position: relative;display: inline;">Chat:<br/><textarea Name="message" id="msgTxtBox" cols="48" rows="1" style="border: 1px solid silver" onkeyup="updateStrLen(event);"></textarea>&nbsp;<input type="submit" value="Send" id="btnSubmit" onClick="AddChat();return false;"/><a id="ref" href="/g/cubug/labBook.asp?v=6RuvB83l*g0&amp;pvid=v31b.RJhh&amp;p=reonin&amp;pid=v31b.RITn">Refresh</a><br/><div id="StrLen" style="display:block;visibility:hidden">0/255</div></div><input name ="p" id="p" type ="Hidden" value="reonin"/><input name = "ct" id="ct"  type="Hidden" value ="cubugMainja"/><input name = "v" type="Hidden" value ="6RuvB83l*g0"/><input type="hidden" Name="msgNos" id="msgNos" value="20"/><input type="hidden" name="p" value="reonin"/><input type="hidden" name="pid" value="v31b.RITn"/><body onload="ScrollPageInit();"><script type="text/javascript">function updateStrLen(event){  if (event.keyCode == 13 || event.keyCode == 10) { AddChat();};if (document.getElementById("msgTxtBox").value.length > 255) {document.getElementById("msgTxtBox").value=document.getElementById("msgTxtBox").value.substring(0, 255);} else {document.getElementById("StrLen").innerHTML = (document.getElementById("msgTxtBox").value.length)+"/255"; document.getElementById("msgTxtBox").rows = (document.getElementById("msgTxtBox").value.length/20 +1);};}timerID = null;var active = 0;var obj = null;var iblink = 1;var Msgs = null;var strChatMessage = null;var strChatRoom="";var sCallingFnc="";var msgcntdiff;var Timeout = null;var request = false;try{request = new XMLHttpRequest();}catch(trymicrosoft){try {request = new ActiveXObject("Msxml2.XMLHTTP");}catch(othermicrosoft){try{request = new ActiveXObject("Microsoft.XMLHTTP");}catch(failed){request=false;}}}function GetChat(){ ClearGetMsgTimeout();Msgs = document.getElementById("msgNos").value;var MsgCnt=document.getElementById("mc").value;strChatRoom = document.getElementById("ct").value;var pgno=document.getElementById('curPgNo').value;var d = new Date();var Url = '/i/chat/chatfncsRet.asp?pvid='+d.getTime()+'&iNoOfMsgsToShow='+Msgs+'&strChatRoom='+strChatRoom+'&mc='+MsgCnt+'&PgNo='+pgno+'&iHandsetwidth=480'+'&v=6RuvB83l*g0'+'&dsktp=True'+'&div=1'+'&surl='; sCallingFnc="FnGet";request.open("GET",Url,true);request.onreadystatechange = updatePage;request.send(null);var PgNo=document.getElementById('curPgNo').value;if(PgNo=='1'){SetGetMsgTimeout();}}function  AddChat(){ClearGetMsgTimeout();Msgs = document.getElementById("msgNos").value;strChatMessage = trimAll(document.getElementById("msgTxtBox").value);strChatRoom = document.getElementById("ct").value;if(strChatMessage!=""){var Url = '/i/chat/chatfncsAdd.asp?iNoOfMsgsToShow='+Msgs+'&strChatRoom='+strChatRoom+'&strChatMessage='+strChatMessage+'&iHandsetwidth=480'+'&v=6RuvB83l*g0'+'&dsktp=True'+'&div=1'+'&surl=';request.open("GET",Url,true);document.getElementById("msgTxtBox").value="";document.getElementById("StrLen").innerHTML="0/255";sCallingFnc="FnAdd";request.onreadystatechange = updatePage;request.send(null);}SetGetMsgTimeout();}function trimAll(sString){while (sString.substring(0,1) == ' '){sString = sString.substring(1, sString.length);}while (sString.substring(sString.length-1, sString.length) == ' '){sString = sString.substring(0,sString.length-1);}return sString;}function FormatTable(strMsgs){var newmsgcnt = strMsgs.substring(strMsgs.lastIndexOf('§')+1,strMsgs.length); var ArrMsgs = strMsgs.split("§");var ArrEachMsg;var sb ="";{sb =  "<Table  width='100%'>";for(var i=0;i<ArrMsgs.length-1;i++){ArrEachMsg=ArrMsgs[i].split("¶");sb = sb  + "<tr>";for(var j=0;j<ArrEachMsg.length;j++){if(j==0){sb = sb  + "<td align='left'>";}else{sb = sb  + "<td valign='middle' align='left'>" ;}sb = sb  + ""  + ArrEachMsg[j]+"";sb = sb  + "</td>";}sb = sb  + "</tr>";}sb = sb  +  "</Table>";document.getElementById("page1").innerHTML=sb;document.getElementById("mc").value=newmsgcnt;document.getElementById("page1").innerHTML=sb;}}function SetGetMsgTimeout(){Timeout = setTimeout("GetChat()",10000);}function ClearGetMsgTimeout(){clearTimeout(Timeout);}function ScrollPageInit() { GetChat();SetGetMsgTimeout();document.getElementById("StrLen").style.visibility="visible";document.getElementById("ref").style.display="none";document.getElementById("dvPg").style.visibility="visible";}function updatePage(){if (request.readyState==4){if(request.responseText!=null){var strMsgs = request.responseText ;if(strMsgs!=''){FormatTableDiv(strMsgs);}}}}function FormatTableDiv(strMsgs){var newmsgcnt = strMsgs.substring(strMsgs.lastIndexOf('§', strMsgs.lastIndexOf('§')+1)+1,strMsgs.lastIndexOf('§')+1);var oldmsgcnt = document.getElementById("mc").value;var iefinaltext="";var ietext="";var ArrMsgs = strMsgs.split("§");var ArrEachMsg;var sb ="";var divNm;var divClass = "chto";var existingobj = document.getElementById("page1");existingobj.innerHTML="";for(var i=0;i<ArrMsgs.length-3;i++){ArrEachMsg=ArrMsgs[i].split("¶");divNm=parseInt(i)+1;var sometext;var ndiv = document.createElement('div');var ttable = document.createElement('table');var trow = document.createElement('tr');if (divNm%2 == 0){divClass = "chte";}else{divClass = "chto";};ndiv.setAttribute('id','chat'+divNm);ndiv.setAttribute('class',divClass);ietext='<div id=' + divNm +' class="'+divClass+'"><table><tr>';for(var j=0;j<=1;j++){var tcol = document.createElement('td');if(j==0){tcol.align='left';ietext=ietext + '<td align="left">';}else{tcol.setAttribute('valign','middle'); tcol.setAttribute('align','left');ietext=ietext + '<td valign="middle" align="left">';}sometext =  ""  + ArrEachMsg[j]+"";tcol.innerHTML=sometext; ietext=ietext+sometext+'</td>';trow.appendChild(tcol);}ttable.appendChild(trow);ndiv.appendChild(ttable);ietext=ietext + '</tr></table></div>';existingobj.appendChild(ndiv);iefinaltext=iefinaltext+ietext;}iefinaltext=iefinaltext + '<div>'+ArrMsgs[ArrMsgs.length-1]+'</div>';existingobj.innerHTML=iefinaltext;document.getElementById("lstPos").value="" + divNm + ""; if (newmsgcnt!=""){msgcntdiff = (parseInt(newmsgcnt)-parseInt(oldmsgcnt));}else{msgcntdiff=0;}if(msgcntdiff>0){document.getElementById("scrPos").value = parseInt(document.getElementById("scrPos").value)+parseInt(msgcntdiff);if(parseInt(document.getElementById("scrPos").value)>=20){document.getElementById("scrPos").value=20;}}else{document.getElementById("scrPos").value=parseInt(document.getElementById("scrPos").value)+parseInt(msgcntdiff);if(parseInt(document.getElementById("scrPos").value)<0){document.getElementById("scrPos").value=0;}}if(document.getElementById("pgupclicked").value=="true"){document.getElementById("scrPos").value=1;}document.getElementById("mc").value=newmsgcnt;PageCalc(strMsgs);} function PageCalc(strMsgs){ var strActMsg = strMsgs.substring(1,strMsgs.lastIndexOf('§'));var ArrMsgs = strMsgs.split("§");var TotMsgs = strActMsg.substring(strActMsg.lastIndexOf('§')+1,strActMsg.length);var noOfPgs=Math.ceil(TotMsgs/20); var i;strHtml="";var curpgno =document.getElementById("curPgNo").value; for(i=1;i<=noOfPgs;i++){if(i==curpgno){strHtml=strHtml + curpgno + "&nbsp;&nbsp;";}else{strHtml= strHtml + "<a href='javascript:PageClicked("+i+")' >" + i +"</a>&nbsp;&nbsp;";}} var strDiv ="";var NxtPg=0;var PrevPg=0;if(curpgno==1){ if(curpgno!=noOfPgs){NxtPg=parseInt(curpgno);NxtPg=NxtPg+1;strDiv="&nbsp;" + curpgno + "&nbsp;&nbsp;<a href='javascript:PageClicked("+NxtPg+")' > >> </a>";}}else{if(curpgno==noOfPgs){NxtPg=parseInt(curpgno);NxtPg=NxtPg+1;PrevPg=parseInt(curpgno);PrevPg=PrevPg-1;strDiv="<a href='javascript:PageClicked("+PrevPg+")' > << </a>&nbsp;&nbsp;&nbsp;" +curpgno;}else{NxtPg=parseInt(curpgno);NxtPg=NxtPg+1;PrevPg=parseInt(curpgno);PrevPg=PrevPg-1;strDiv="<a href='javascript:PageClicked("+PrevPg+")' > << </a>&nbsp;&nbsp;&nbsp;"+curpgno+"&nbsp;&nbsp;<a href='javascript:PageClicked("+NxtPg+")' > >> </a>";}} document.getElementById("dvPg").innerHTML=strDiv; } function PageClicked(PgNo){ Msgs=document.getElementById('msgNos').value;strChatRoom = document.getElementById("ct").value;var MsgCnt=document.getElementById("mc").value;document.getElementById("scrPos").value="1"; var Url = '/i/chat/chatfncsRet.asp?iNoOfMsgsToShow='+Msgs+'&strChatRoom='+strChatRoom+'&mc='+MsgCnt+'&pgNo='+PgNo+'&pgclicked=true&iHandsetwidth=480'+'&v=6RuvB83l*g0'+'&dsktp=True'+'&div=1'+'&surl=';sCallingFnc="FnPgCh";document.getElementById("curPgNo").value=PgNo;request.setTimeout=1000; request.open("GET",Url,true);request.onreadystatechange = updatePage;request.send(null);if (PgNo=="1"){SetGetMsgTimeout();}}</script><table width=460><tr><td width=460><div id="page1"></div></td><td valign="top" align="right width=32px"></td></tr></table><input type="hidden" id="YVal" /><input type="hidden" id="mc" value = ""/><input type="hidden" id="scrPos" value ="1"/><input type="hidden" id="lstPos" value=""/><input type="hidden" id="curPgNo" value="1"></input><input type="hidden" id="pgupclicked" value="true"/><input type="hidden" id="pgdwnclicked" value="false"/><br/><div id='dvPg' align='center' style="visibility:hidden;" ></div></body></form><div class='m22'><div class='game-share'>SHARE WITH FRIENDS</div><div class='shareImages'><img onclick="window.open('http://www.facebook.com/dialog/feed?app_id=360654660655980&link=http://m.tylted.com/g/cubug/index.asp%3Ff=facebook&picture=http://m.tylted.com/img/splash/177x116/cubug.png&name=I%60m%20playing%20Cubugs%20on%20Tylted!&caption=m.tylted.com/g/cubug/index.asp&description=Match%20cubes%20to%20release%20enigmatic%20cubugs.%20Each%20game%20discovers%20more%20for%20your%20lab!%20Play%20now%20on%20Tylted!&redirect_uri=http://m.tylted.com/g/cubug/labBook.asp&ref=game_cubug','mywindow','menubar=1,resizable=1,width=1200,height=800');" src='/img/global/img/icon_facebook.gif' border='0'/><img onclick="window.open('https://twitter.com/share?url=http://m.tylted.com/g/cubug/index.asp?f=twitter&text=I%60m%20playing%20Cubugs!%20Play%20now%20on%20%40Tylted!&related=Tylted&hashtags=Cubugs','mywindow','menubar=1,resizable=1,width=500,height=500');" src='/img/global/img/icon_twitter.gif' border='0'/><button onclick="window.location='/mall/bank/cellubank.asp'" type='submit'>FUNCOINS</button></div></div><div style='clear:both;'></div>
+            <link rel="stylesheet" href="/css/add2home.css">
+            <script type="text/javascript" src="/js/add2home.js" charset="utf-8"></script>
+
+            
+     </div>
+     </div> 
+       <div id="rightSkyScraper">
+          <script type="text/javascript">
+            var pubId = 30784;
+         
+             //<!-- PubMatic ad tag (Javascript) : Tylted_160x600_ROS_Right_US | http://www.tylted.com | 160 x 600 Wide Skyscraper -->
+             var siteId = 30785;
+             var kadId = 31869;
+         
+            var kadwidth = 160;  var kadheight = 600; var kadtype = 1;
+            </script>
+            <script type="text/javascript" src="http://ads.pubmatic.com/AdServer/js/ibshowad.js">
+            </script>       
+
+  </div>
+  <div style="clear:both;"></div>
+     <footer class="tylted-footer"> 
+    <div class="row-fluid"> 
+        <div class="span12 btn"><a href="/games.asp">Games</a></div>
+        <div class="span12 btn"><a href="/h/hw/main.asp">Community</a></div>
+        <div class="span12 btn"><a href="/mall/index.asp">Shopping</a></div>
+        <div class="span12 btn"><a href="/mall/bank/fcnew.asp">FunCoins</a></div>
+        <div class="span12 btn"><a href="/p/inbox.asp">My Inbox</a></div>
+        <div class="span12 btn"><a href="/p/player.asp">My Profile</a></div>
+        <div class="span12 btn"><a href="/p/closet.asp">My Appearance</a></div>
+        <div class="span12 btn"><a href="/p/inv.asp">My Stuff</a></div>
+        <div class="span12 btn"><a href="/logout.asp">Logout</a></div>
+    </div> 
+         
+    <div class="upperFooter">
+        <ul class="upperLinks">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/games.asp">GAMES</a>
+                <ol class="subLinks">
+                    <li><a href="/h/spd/main.asp">Luck O' The Irish</a></li>
+                    <li><a href="/g/ops/opsIndex.asp">Special Ops</a></li>
+                    <li><a href="/g/vampire/vampireIndex.asp">Vampires Rising</a></li>                    
+                    <li><a href="/games.asp">All Games</a></li>
+                </ol>
+            </li>
+            <li><a href="/h/hw/index.asp">COMMUNITY</a>
+                <ol class="subLinks">
+                    <li><a href="/h/xm/main.asp">Merry Mobile</a></li>
+                    <li><a href="/g/bar/barChoose.asp">Bar Scene</a></li>
+                    <li><a href="/mall/flirts/ffindex.asp">Fun Flirts</a></li>
+                    <li><a href="/p/friends.asp">Friends</a></li>
+                    <li><a href="/p/blog/blog.asp">My Blog</a></li>
+                </ol>
+            </li>
+            <li><a href="/mall/index.asp">SHOPPING</a>
+                 <ol class="subLinks">
+                    <li><a href="/mall/index.asp">Mall</a></li>
+                    <li><a href="/mall/bank/fcnew.asp">FunCoins</a></li>
+                    <li><a href="/mall/bank/mobileoffers.asp">Offer Wall</a></li>
+                </ol>
+            </li>
+            <li><a href="/p/player.asp">MY ACCOUNT</a>
+                <ol class="subLinks">
+                    <li><a href="/p/inbox.asp">My Inbox</a></li>
+                    <li><a href="/p/player.asp">My Profile</a></li>
+                    <li><a href="/p/closet.asp">My Appearance</a></li>
+                    <li><a href="/p/inv.asp">My Stuff</a></li>
+                    <li><a href="/logout.asp">Logout</a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bottomFooter">
+       <div class="bottomContent">
+        <div class="footer-logo"> 
+       	    <a class="nav-logo" href="/"><img src="/img/logo/logo_mobile.png" alt="tylted" height="30px" width="" border="0"></a> 
+            <li class="copyright">&copy; 2012</li> 
+        </div> 
+    
+        <ul class="fdLinks"> 
+            <li><a href="/l.asp">Languages</a></li>
+            <li><a href="/about/help.asp">Help</a></li> 
+            <li><a href="/about/">About</a> </li> 
+            <li><a href="/about/tos.asp">Terms of Service </a> </li> 
+        </ul>
+        
+        <div class="footerSocial">
+            <a href="https://twitter.com/tylted" target="_blank"><img src="/img/global/twitter.png" /></a>
+            <a href="https://facebook.com/tylted" target="_blank"><img src="/img/global/facebook.png" /></a>
+            <a href="https://plus.google.com/u/0/b/109972836721091237823/109972836721091237823/posts/p/pub" target="_blank"><img src="/img/global/googleplus.png" /></a>
+        </div> 
+      </div>
+    </div>
+</footer>
+
+	</div>
+
+    
+</div>
+
+
+<script src="/js/gears_init.js"></script>
+<script src="/js/geo.js?id=1"></script>
+<script type="text/javascript" src="http://widgets.beintoo.com/assets/beintoo.js"></script> 
+
+<script> //<![CDATA[
+//GEOLOCATION CODE
+        
+
+    
+    var strHandsetWidthSaved = '1349'; var strHandsetHeightSaved = '1361'; strHandsetWidth = getWidth(); strHandsetHeight = getHeight(); if ((strHandsetWidth != strHandsetWidthSaved) || (strHandsetHeight != strHandsetHeightSaved)) { AjaxPost('/i/ajax/deviceUpdate.asp', 'width=' + strHandsetWidth + '&height=' + strHandsetHeight, true, void (0), 2); };
+    
+    var strNotificationData;
+     var intialTimeout = setTimeout("AjaxPost('/i/ajax/getNotifications.asp', '', true, notificationCallback, 2)", 100);
+     var notificationLoop = setInterval("AjaxPost('/i/ajax/getNotifications.asp', '', true, notificationCallback, 2)", 15000);
+    
+    window.scrollTo(1,1);
+
+    
+
+//]]>
+</script>
+     
+   <img id="omniturebeacon" src="http://metrics.tylted.com/b/ss/cellufuncomprod/5/?gn=Games%3ACubugs%3ACubugs+%2D+Lab+Book&amp;r=http%3A%2F%2Fm%2Etylted%2Ecom%2Fg%2Fcubug%2Flab%2Easp%3Fv%3D6RuvB83l%2Ag0&amp;ch=&amp;v0=&amp;zip=10005&amp;v1=Cubugs&amp;ev=&amp;pl=&amp;v2=reonin&amp;v3=male&amp;v4=840&amp;age=23&amp;l1=DesktopHeaderAd%2CDesktopMidAd%2CDesktopFooterAd&amp;pvid=v31b.RJhh" height="5" width="5" alt="OT"  style="display:none;"/>
+   <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=9266681&amp;c4=m%2Etylted%2Ecom%2Fg%2Fcubug%2FlabBook%2Easp%3Fp%3Dreonin%26v%3D6RuvB83l%2Ag0%26pid%3Dv31b%2ERITn" alt="*" style="display:none;"/>
+   <img src="http://pixel.quantserve.com/pixel/p-8bk-pCJtOty0k.gif" border="0" height="1" width="1" alt="Quantcast" style="display:none;"/>
+
+    <!-- Web04 -->
+</body>
+</html>

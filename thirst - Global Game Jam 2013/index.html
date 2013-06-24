@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+	Note: you shouldn't need to make any changes to this file, but you can if you'd like.
+-->
+<html>
+	<head>
+		<title>thirst</title>
+		<style>
+			/* Basic CSS reset stuff */
+			html, body { height: 100%; background: #000; color: white; }
+			html, body, ul, ol, li, form, fieldset, legend { margin: 0; padding: 0; }
+			div { border-box; -webkit-box-sizing: border-box; }
+			body { font-family: Helvetica, Tahoma; }
+			body, div, span {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				-webkit-user-select: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="rate"></div>
+		<canvas id="canvas" width="640" height="480" style="margin: auto auto"></canvas>
+		<div id="debug"></div>
+	</body>
+
+<script type="text/javascript" src="sound/soundmanager/script/soundmanager2.js"></script>
+<script type="text/javascript" src="sound/soundmanager/sound.js"></script>
+
+<script>
+(function() {
+window.canvas = document.getElementById('canvas');
+window.ctx = canvas.getContext('2d');
+
+var SLICE = Array.prototype.slice;
+/*
+Simple bind implementation. Example usage:
+bind(this, yourCallback); // Sets the context to "this"
+*/
+window.bind = function(ctx, cb) {
+	var args = SLICE.call(arguments, 2);
+	return function() {
+		if (typeof cb == 'string') {
+			ctx[cb].apply(ctx, args.concat(SLICE.call(arguments, 0)));
+		} else {
+			cb.apply(ctx, args.concat(SLICE.call(arguments, 0)));
+		}
+	}
+}
+
+// Set up a Timer to call window.tick (found in your_code.js)
+var reqAnim = window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              function (callback, element) {
+              	window.setTimeout(callback, 1000 / 60);
+              }; ;
+
+var Timer = function() {
+	this._time = Date.now();
+	this._tick = bind(this, 'tick');
+	reqAnim.call(window, this._tick);
+};
+
+Timer.prototype.now = 0;
+Timer.prototype.tick = function() {
+	reqAnim.call(window, this._tick);
+
+	var time = Date.now();
+	var dt = time - this._time;
+	this._time = time;
+	this.now += dt;
+	this.onTick && this.onTick(dt);
+}
+
+window.timer = new Timer();
+window.input = {
+	onMouseDown: function(x, y) {},
+	onMouseUp: function(x, y) {},
+	onMouseMove: function(x, y) {}
+};
+
+canvas.addEventListener('mousedown', function(e) {
+	input.onMouseDown(e.clientX, e.clientY);
+}, false);
+	canvas.addEventListener('mouseup', function(e) {
+		input.onMouseUp(e.clientX, e.clientY);
+	}, false);
+canvas.addEventListener('mousemove', function(e) {
+	input.onMouseMove(e.clientX, e.clientY);
+}, false);
+
+})();
+
+</script>
+<script src="jquery.min.js"></script>
+<script src="game.js"></script>
+<script src="loadImages.js"></script>
+</html>
