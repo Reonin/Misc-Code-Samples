@@ -1,0 +1,108 @@
+<script>
+
+function GetSetCookie() {
+            var version = getCookie("version");
+            if (version != null && version != "") {
+                if (version == 'full') {
+                    version = 'text';
+                }
+                else {
+                    version = 'full';
+                }
+            }
+            else {
+                version = 'full';
+            }
+            setCookie("version", version, 365);
+            window.top.location.reload();
+        }
+function setCookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value + "; path=/";
+        }
+function getCookie(c_name) {
+            var i, x, y, ARRcookies = document.cookie.split(";");
+            for (i = 0; i < ARRcookies.length; i++) {
+                x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == c_name) {
+                    return unescape(y);
+                }
+            }
+        }
+//getCookie("bwVisit");
+if( getCookie("bwVisit") == "no"){
+  //Dont popup
+  console.log("Yay you have been here before dont push popup");
+  
+}
+else{
+  
+  //Pop up the div that on hover gives email opt in features
+jQuery( document ).ready(function() {
+jQuery( "#comic-foot" ).hover(
+  function() {
+		console.log("POPUP SHOULD BE HERE!");
+		jQuery("#bwOptinPopup").show();
+
+		}
+);
+});
+  setCookie("bwVisit", "no", 30);
+}
+
+
+
+
+
+jQuery( document ).ready(function() {
+//jQuery(".ois_box_13").appendTo("#bwOptinPopup");
+});
+
+
+
+
+
+function closePopup(){
+//Not only close the popup but make sure it doesnt constantly trigger by unbinding it from the element I binded the event to
+jQuery('#comic-foot').unbind('mouseenter mouseleave');
+ jQuery("#bwOptinPopup").hide();
+
+
+}
+</script>
+
+<div id="bwOptinPopup" style="display:none;background: url(http://battleworld.tv/wp-content/uploads/2014/02/S043-Panel-4.jpg);height: 450px; width: 685px;position: fixed;top: 50%;left: 50%;margin-left:-366px;margin-top:-225px; z-index:1000;border: black 18px solid;">
+
+
+
+
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#rgba(255, 255, 255, 0); clear:left; font:14px Helvetica,Arial,sans-serif;margin-left: 200px; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<p style="line-height: 26px !important;font-family: 'PT Serif', Arial !important; margin-bottom: 0px !important; font-size: 26px !important; color: #552d01 !important;">Did you enjoy this comic?</p>
+<form action="http://battleworld.us3.list-manage1.com/subscribe/post?u=3593f467c53ec92d9abdf8433&amp;id=77ad1ae67c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<label for="mce-EMAIL">Subscribe to our mailing list</label>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_3593f467c53ec92d9abdf8433_77ad1ae67c" value=""></div>
+	<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+<p onclick="closePopup()" style="line-height: 26px !important;font-family: 'PT Serif', Arial !important; margin-bottom: 0px !important; font-size: 26px !important; color: #552d01 !important;">Close</p>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
+
+
+</div>
+
