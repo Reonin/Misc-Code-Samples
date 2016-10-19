@@ -1,0 +1,23 @@
+/* Put your css in here */
+h1,p, li,ul,div { font-family: 'Roboto', sans-serif }
+
+
+.singleFormatImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+    
+.singleFormatProductName, .singleFormatPrice{
+  text-align: center;
+  
+}
+
+.siteHeader{
+  
+  font-family: 'Chewy', cursive;
+}
+
+.listHeaders{
+  
+  font-family: 'Roboto', sans-serif;
+}

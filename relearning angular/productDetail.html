@@ -1,0 +1,71 @@
+<div>
+  <h2 class="singleFormatProductName">Product List</h2>
+
+  <table st-table="rowCollection" class="table">
+    <thead>
+      <tr>
+        <th st-sort="name">Product Name</th>
+        <th st-sort="img">Image</th>
+        <th st-sort="price">Price</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr st-select-row="row" st-select-mode="multiple" ng-repeat="x in myDetailData">
+        <td>{{x.title}}</td>
+        <td><img width="60px" ng-src="{{x.image}}"></td>
+        <td>{{x.price | currency}}</td>
+        <td><a ng-href="#/main/{{idCategory}}/product={{x.id}}">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+  <h2 class="singleFormatProductName">Add an item</h2>
+  <ul class="unstyled">
+    <li ng-repeat="todo in todos">
+      <span class="done-{{todo.done}}">{{todo.text}}</span>
+      <input type="checkbox" ng-model="todo.done">
+
+    </li>
+  </ul>
+
+  <table st-table="addACollection" class="table">
+    <thead>
+      <tr>
+        <th st-sort="name">Product Name</th>
+        <th st-sort="img">Image URL</th>
+        <th st-sort="price">Price</th>
+        <th>Product URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr st-select-row="row" st-select-mode="multiple">
+        <td>
+          <input type="formAddName" ng-model="formAddName" ng-model-instant>
+        </td>
+        <td>
+          <input type="text" ng-model="formAddImg" ng-model-instant>
+        </td>
+        <td>
+          <input type="text" ng-model="formAddPrice" ng-model-instant>
+        </td>
+        <td>
+          <input type="text" ng-model="formAddHref" ng-model-instant>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form class="form-horizontal">
+
+    <button class="btn" name="button" ng-click="addItem()">
+      <i class="glyphicon glyphicon-plus">Add</i>
+    </button>
+ 
+  <button class="btn" name="button" confirmed-click="clearLocalSaves()" ng-confirm-click="Would you like to remove the locally saved items?">
+    <i class="glyphicon glyphicon-trash">Clear Local Items</i>
+  </button>
+   </form>
+</div>
